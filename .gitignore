@@ -1,0 +1,6 @@
+.idea
+node_modules
+private/data
+public/dist
+public/dev/css/style.css.map
+npm-debug.log
