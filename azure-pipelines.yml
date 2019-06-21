@@ -16,5 +16,7 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-    git pull origin master
-  displayName: 'test git connection'
+    git add dist
+    git commit -m 'push bundle'
+    git push origin gh-pages
+  displayName: 'push bundle'
