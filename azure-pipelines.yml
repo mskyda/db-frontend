@@ -14,3 +14,7 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: |
+    git pull origin master
+  displayName: 'test git connection'
