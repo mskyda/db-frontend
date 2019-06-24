@@ -16,10 +16,8 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    git config --global user.name "Mischa Skyda"
-    git config --global user.email "mskyda@gmail.com"
-    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+    git config user.name "Mischa Skyda"
+    git config user.email "mskyda@gmail.com"
     git fetch
     git checkout gh-pages
     git pull origin gh-pages
