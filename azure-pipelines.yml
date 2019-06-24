@@ -20,5 +20,6 @@ steps:
     git config --global user.email "mskyda@gmail.com"
     git add dist
     git commit -m 'push bundle'
+    git fetch
     git push origin gh-pages
   displayName: 'push the production bundle'
