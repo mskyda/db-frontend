@@ -18,8 +18,10 @@ steps:
 - script: |
     git config --global user.name "Mischa Skyda"
     git config --global user.email "mskyda@gmail.com"
+    git fetch
+    git checkout gh-pages
+    git pull origin gh-pages
     git add dist
     git commit -m 'push bundle'
-    git fetch
     git push origin gh-pages
   displayName: 'push the production bundle'
