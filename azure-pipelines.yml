@@ -16,7 +16,6 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-    git config --add url."git@github.com:".insteadOf "https://github.com/"
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
     git fetch
