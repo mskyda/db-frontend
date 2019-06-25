@@ -19,6 +19,7 @@ steps:
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
     git pull origin master
+    touch test.txt
     git add .
     git commit -m "test"
     git push origin master
