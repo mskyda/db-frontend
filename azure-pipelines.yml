@@ -18,14 +18,15 @@ steps:
 - script: |
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
+    git remote add origin https://github.com/mskyda/db-frontend
+    git config gc.auto 0
+    git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
+    git config --get-all http.proxy
     git fetch
     git checkout master
     git pull origin master
     touch test.txt
     git add -A .
     git commit -m "test"
-    git config gc.auto 0
-    git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
-    git config --get-all http.proxy
     git -c http.extraheader="AUTHORIZATION: basic ***" push origin master
   displayName: 'push the production bundle'
