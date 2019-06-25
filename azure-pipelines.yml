@@ -22,7 +22,7 @@ steps:
     git checkout master
     git pull origin master
     touch test.txt
-    git add .
+    git add -A .
     git commit -m "test"
     git config gc.auto 0
     git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
