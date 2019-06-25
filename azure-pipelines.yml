@@ -1,28 +1,28 @@
-trigger:
-- master
+#trigger:
+#- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'install node.js'
+#steps:
+#- task: NodeTool@0
+#  inputs:
+#    versionSpec: '10.x'
+#  displayName: 'install node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+#- script: |
+#    npm install
+#    npm run build
+#  displayName: 'npm install and build'
 
 - script: |
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
-    git remote set-url origin git@github.com:mskyda/db-frontend.git
+#    git remote set-url origin git@github.com:mskyda/db-frontend.git
     git fetch
-    git checkout gh-pages
-    git pull origin gh-pages
-    git add dist
-    git commit -m 'push bundle'
-    git push origin gh-pages
+#    git checkout gh-pages
+#    git pull origin gh-pages
+#    git add dist
+#    git commit -m 'push bundle'
+    git push origin master
   displayName: 'push the production bundle'
