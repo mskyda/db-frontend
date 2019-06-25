@@ -4,7 +4,7 @@
 pool:
   vmImage: 'ubuntu-latest'
 
-#steps:
+steps:
 #- task: NodeTool@0
 #  inputs:
 #    versionSpec: '10.x'
@@ -18,11 +18,6 @@ pool:
 - script: |
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
-#    git remote set-url origin git@github.com:mskyda/db-frontend.git
-    git fetch
-#    git checkout gh-pages
-#    git pull origin gh-pages
-#    git add dist
-#    git commit -m 'push bundle'
+    git pull origin master
     git push origin master
   displayName: 'push the production bundle'
