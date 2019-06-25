@@ -19,5 +19,7 @@ steps:
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
     git pull origin master
+    git add .
+    gic commit -m "test"
     git push origin master
   displayName: 'push the production bundle'
