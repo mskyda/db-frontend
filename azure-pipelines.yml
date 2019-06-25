@@ -25,5 +25,5 @@ steps:
     git config gc.auto 0
     git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
     git config --get-all http.proxy
-    git -c http.extraheader="AUTHORIZATION: basic ***" push origin master
+    git -c http.extraheader="AUTHORIZATION: basic ***" push
   displayName: 'push the production bundle'
