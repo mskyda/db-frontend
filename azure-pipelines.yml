@@ -22,5 +22,8 @@ steps:
     touch test.txt
     git add .
     git commit -m "test"
-    git push origin master
+    git config gc.auto 0
+    git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
+    git config --get-all http.proxy
+    git -c http.extraheader="AUTHORIZATION: basic ***" push origin master
   displayName: 'push the production bundle'
