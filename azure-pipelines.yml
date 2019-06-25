@@ -18,6 +18,8 @@ steps:
 - script: |
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
+    git fetch
+    git checkout master
     git pull origin master
     touch test.txt
     git add .
@@ -25,5 +27,5 @@ steps:
     git config gc.auto 0
     git config --get-all http.https://github.com/mskyda/db-frontend.extraheader
     git config --get-all http.proxy
-    git -c http.extraheader="AUTHORIZATION: basic ***" push
+    git -c http.extraheader="AUTHORIZATION: basic ***" push origin master
   displayName: 'push the production bundle'
