@@ -49,9 +49,9 @@ class App extends React.Component <{}, AppState> {
 		this.changeDomain = this.changeDomain.bind(this);
 
 		this.state = {
-			currencies     : window.currencies,
-			results        : window.results,
-			history        : window.searchHistory,
+			currencies     : {},
+			results        : {},
+			history        : [],
 			groupThresholds: {
 				length : [ 1, 3, 4, 5, 6, 7, 8, 9, 10, 14 ],
 				price  : [ '10', '100', '100', '1k', '1k', '10k', '10k', '100k', '100k', '1M' ],
@@ -85,7 +85,11 @@ class App extends React.Component <{}, AppState> {
 
 	}
 
-	componentDidMount(){
+	async componentDidMount(){
+
+		const initData = await (await fetch('https://35.238.11.245/init')).json();
+
+		this.setState(initData);
 
 		this.startSearch();
 
@@ -275,7 +279,7 @@ class App extends React.Component <{}, AppState> {
 			initial: iteration === 0
 		};
 
-		request.open('POST', 'https://domain.bingo/api/check');
+		request.open('POST', 'https://35.238.11.245/api/check');
 
 		request.setRequestHeader('Content-Type', 'application/json');
 
