@@ -19,8 +19,9 @@ steps:
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
     git remote set-url origin https://mskyda:${GIT_TOKEN}@github.com/mskyda/db-frontend.git
+    git fetch
+    git status
     git add dist
     git commit -m "deploy the bundle"
-    git fetch
     git push origin master:gh-pages
   displayName: 'release the production bundle'
