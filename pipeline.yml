@@ -22,8 +22,10 @@ steps:
     git stash
     git fetch
     git checkout gh-pages
+    git pull origin gh-pages
     git stash pop
     git add dist
     git commit -m "deploy the bundle"
+    git branch
     git push origin gh-pages
   displayName: 'release the production bundle'
