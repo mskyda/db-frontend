@@ -19,6 +19,8 @@ steps:
     git config user.name "Mischa Skyda"
     git config user.email "mskyda@gmail.com"
     git remote set-url origin https://mskyda:${GIT_TOKEN}@github.com/mskyda/db-frontend.git
+    git add .
+    git reset --hard
     git fetch
     git checkout gh-pages
     git add dist
