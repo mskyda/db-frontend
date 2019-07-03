@@ -21,5 +21,5 @@ steps:
     git remote set-url origin https://mskyda:${GIT_TOKEN}@github.com/mskyda/db-frontend.git
     git add dist
     git commit -m "deploy the bundle"
-    git push origin HEAD:gh-pages
+    git push origin HEAD:gh-pages --force
   displayName: 'release the production bundle'
