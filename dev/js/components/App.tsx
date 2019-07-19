@@ -87,7 +87,7 @@ class App extends React.Component <{}, AppState> {
 
 	async componentDidMount(){
 
-		const initData = await (await fetch('https://35.238.11.245/init')).json();
+		const initData = await (await fetch('http://35.238.11.245/init')).json();
 
 		this.setState(initData);
 
@@ -279,7 +279,7 @@ class App extends React.Component <{}, AppState> {
 			initial: iteration === 0
 		};
 
-		request.open('POST', 'https://35.238.11.245/api/check');
+		request.open('POST', 'http://35.238.11.245/api/check');
 
 		request.setRequestHeader('Content-Type', 'application/json');
 
